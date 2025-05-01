@@ -1,0 +1,816 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1536px;
+    margin: 0 auto;
+}
+
+/* Header and Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    margin: 0 1.25rem;
+    padding: 0 1.25rem;
+    height: 4rem;
+    background-color: white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border: 1px solid black;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 1.25rem;
+    background-color: #f5f5f5;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.hero-text {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.hero-text h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-button {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.hero-button:hover {
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem 0 black;
+}
+
+.hero-button.red {
+    background-color: #ff6b6b;
+}
+
+.hero-button.blue {
+    background-color: #4dabf7;
+}
+
+/* Partners Section */
+.partners {
+    padding: 2.5rem 1.25rem;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.partners h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partner-logo {
+    height: 6rem;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 0.2s;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 2.5rem 1.25rem;
+    background-color: #4dabf7;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.testimonial-card {
+    padding: 1rem;
+    background-color: #e7f5ff;
+    border-radius: 1rem;
+}
+
+.testimonial-content {
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.author-image {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    object-fit: cover;
+}
+
+/* Discord Section */
+.discord {
+    padding: 2.5rem 1.25rem;
+    background-color: #f5f5f5;
+}
+
+.discord-card {
+    padding: 1rem;
+    background-color: #ffd43b;
+    border-radius: 1rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.discord-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.discord-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 1.25rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.discord-button:hover {
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem 0 black;
+}
+
+/* Footer */
+footer {
+    background-color: #f5f5f5;
+    padding: 2.5rem 1.25rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.footer-column h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+/* About Page Styles */
+.about-hero {
+    padding: 2.5rem 1.25rem;
+    background-color: #f5f5f5;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.goals {
+    padding: 2.5rem 1.25rem;
+}
+
+.goals h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.goal-card {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.goal-card img {
+    margin-bottom: 1rem;
+}
+
+.goal-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.team {
+    padding: 2.5rem 1.25rem;
+    background-color: #f5f5f5;
+}
+
+.team h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+/* Events Page Styles */
+.events-hero {
+    padding: 2.5rem 1.25rem;
+    background-color: #f5f5f5;
+}
+
+.events-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.events-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.upcoming-events, .past-events {
+    padding: 2.5rem 1.25rem;
+}
+
+.upcoming-events h2, .past-events h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.event-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    padding: 0.5rem;
+    background-color: #f5f5f5;
+    border-radius: 0.5rem;
+}
+
+.event-date .day {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.event-time {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.event-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #4dabf7;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.registration {
+    padding: 2.5rem 1.25rem;
+    background-color: #f5f5f5;
+}
+
+.registration h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.registration-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.submit-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4dabf7;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Blog Page Styles */
+.blog-hero {
+    padding: 2.5rem 1.25rem;
+    background-color: #f5f5f5;
+}
+
+.blog-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.blog-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.blog-posts {
+    padding: 2.5rem 1.25rem;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-post {
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.post-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #4dabf7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.pagination-button {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination-button.active {
+    background-color: #4dabf7;
+    color: white;
+    border-color: #4dabf7;
+}
+
+.newsletter {
+    padding: 2.5rem 1.25rem;
+    background-color: #f5f5f5;
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.newsletter-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4dabf7;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* Partnership Page Styles */
+.partnership-hero {
+    padding: 2.5rem 1.25rem;
+    background-color: #f5f5f5;
+}
+
+.partnership-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.partnership-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.benefits {
+    padding: 2.5rem 1.25rem;
+}
+
+.benefits h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.benefit-card {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.benefit-card img {
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.partnership-types {
+    padding: 2.5rem 1.25rem;
+    background-color: #f5f5f5;
+}
+
+.partnership-types h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.type-card {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.type-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.type-card ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.type-card li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.type-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4dabf7;
+}
+
+.current-partners {
+    padding: 2.5rem 1.25rem;
+}
+
+.current-partners h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    padding: 2.5rem 1.25rem;
+    background-color: #f5f5f5;
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.partnership-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.partnership-form .form-group:last-child {
+    grid-column: 1 / -1;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-button span {
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.2s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid black;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+    .hero-content,
+    .goals-grid,
+    .team-grid,
+    .events-grid,
+    .posts-grid,
+    .benefits-grid,
+    .types-grid,
+    .partnership-form {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        margin: 0 5rem;
+        padding: 0 2.5rem;
+        height: 5rem;
+    }
+
+    .hero {
+        padding: 0 5rem;
+    }
+
+    .hero-content {
+        flex-direction: row;
+    }
+
+    .partners,
+    .testimonials,
+    .discord,
+    footer,
+    .about-hero,
+    .goals,
+    .team,
+    .events-hero,
+    .upcoming-events,
+    .past-events,
+    .registration,
+    .blog-hero,
+    .blog-posts,
+    .newsletter,
+    .partnership-hero,
+    .benefits,
+    .partnership-types,
+    .current-partners,
+    .contact-form {
+        padding: 5rem;
+    }
+} 

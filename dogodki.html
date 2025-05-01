@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogodki - Klub Ada</title>
+    <meta name="description" content="Oglejte si prihajajoče in pretekle dogodke v Klubu Ada.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">
+            <img src="assets/klub-ada-logo.svg" alt="Klub Ada Logo" height="50">
+        </a>
+        <button class="mobile-menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/o-nas.html">O nas</a></li>
+            <li><a href="/dogodki.html">Dogodki</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/partnerstvo.html">Partnerstvo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="events-hero">
+            <div class="events-content">
+                <h1>Dogodki v Klubu Ada</h1>
+                <p>Oglejte si prihajajoče dogodke in se nam pridružite. Organiziramo delavnice, predavanja in druge aktivnosti za mlade.</p>
+            </div>
+        </section>
+
+        <section class="upcoming-events">
+            <h2>Prihajajoči dogodki</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Marec</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Delavnica programiranja</h3>
+                        <p class="event-time">10:00 - 14:00</p>
+                        <p class="event-description">Učite se osnove programiranja in ustvarite svojo prvo spletno stran.</p>
+                        <a href="#prijava" class="event-button">Prijava</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">Marec</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Predavanje o umetni inteligenci</h3>
+                        <p class="event-time">18:00 - 20:00</p>
+                        <p class="event-description">Spoznajte možnosti in izzive umetne inteligence.</p>
+                        <a href="#prijava" class="event-button">Prijava</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">29</span>
+                        <span class="month">Marec</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Delavnica oblikovanja</h3>
+                        <p class="event-time">14:00 - 17:00</p>
+                        <p class="event-description">Naučite se osnov oblikovanja in ustvarite svojo prvo grafiko.</p>
+                        <a href="#prijava" class="event-button">Prijava</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pretekli" class="past-events">
+            <h2>Pretekli dogodki</h2>
+            <div class="events-grid">
+                <div class="event-card past">
+                    <div class="event-date">
+                        <span class="day">1</span>
+                        <span class="month">Marec</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Delavnica fotografije</h3>
+                        <p class="event-time">10:00 - 14:00</p>
+                        <p class="event-description">Osnove fotografije in obdelave slik.</p>
+                        <a href="#" class="event-button">Galerija</a>
+                    </div>
+                </div>
+                <div class="event-card past">
+                    <div class="event-date">
+                        <span class="day">8</span>
+                        <span class="month">Marec</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Predavanje o podjetništvu</h3>
+                        <p class="event-time">18:00 - 20:00</p>
+                        <p class="event-description">Kako začeti svoje podjetje in uspešno voditi posel.</p>
+                        <a href="#" class="event-button">Galerija</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prijava" class="registration">
+            <h2>Prijava na dogodek</h2>
+            <form class="registration-form">
+                <div class="form-group">
+                    <label for="name">Ime in priimek</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-poštni naslov</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="event">Izberite dogodek</label>
+                    <select id="event" name="event" required>
+                        <option value="">Izberite dogodek</option>
+                        <option value="programiranje">Delavnica programiranja</option>
+                        <option value="ai">Predavanje o umetni inteligenci</option>
+                        <option value="design">Delavnica oblikovanja</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Pošlji prijavo</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>O nas</h3>
+                    <a href="/o-nas.html">Kdo smo</a>
+                    <a href="/o-nas.html#cilji">Naši cilji</a>
+                    <a href="/o-nas.html#ekipa">Naša ekipa</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Dogodki</h3>
+                    <a href="/dogodki.html">Prihajajoči dogodki</a>
+                    <a href="/dogodki.html#pretekli">Pretekli dogodki</a>
+                    <a href="/dogodki.html#prijava">Prijava na dogodek</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <a href="mailto:info@klub-ada.si">info@klub-ada.si</a>
+                    <a href="tel:+38612345678">+386 12 345 678</a>
+                    <a href="https://goo.gl/maps/your-location" target="_blank" rel="noopener noreferrer">Lokacija</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Klub Ada. Vse pravice pridržane.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
